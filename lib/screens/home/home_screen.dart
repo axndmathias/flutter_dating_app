@@ -20,10 +20,18 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
+          style:
+              ElevatedButton.styleFrom(primary: Theme.of(context).primaryColor),
           onPressed: () {
             Navigator.pushNamed(context, '/matches');
           },
-          child: const Text('Matches Screen'),
+          child: Text(
+            'Matches Screen',
+            style: Theme.of(context)
+                .textTheme
+                .headline2
+                ?.copyWith(color: Colors.white),
+          ),
         ),
       ),
     );

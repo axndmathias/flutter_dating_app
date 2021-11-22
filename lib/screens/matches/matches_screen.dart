@@ -20,10 +20,18 @@ class MatchesScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
+          style:
+              ElevatedButton.styleFrom(primary: Theme.of(context).primaryColor),
           onPressed: () {
             Navigator.pushNamed(context, '/');
           },
-          child: const Text('Home Screen'),
+          child: Text(
+            'Home Screen',
+            style: Theme.of(context)
+                .textTheme
+                .headline2
+                ?.copyWith(color: Colors.white),
+          ),
         ),
       ),
     );

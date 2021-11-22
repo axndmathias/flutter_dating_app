@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dating_app/config/app_router.dart';
 import 'package:flutter_dating_app/screens/home/home_screen.dart';
 
+import 'config/theme.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,9 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: theme(),
       onGenerateRoute: AppRouter.onGenerateRoute,
       initialRoute: HomeScreen.routeName,
     );
